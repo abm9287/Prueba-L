@@ -15,7 +15,10 @@ class CreateUsuarioRolsTable extends Migration
     {
         Schema::create('usuario_rols', function (Blueprint $table) {
             $table->id();
+            $table->string('rol');
             $table->timestamps();
+           $table->bigInteger('role_id')->unsigned();
+            $table->foreign('role_id')->references('id')->on('usuarios')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
