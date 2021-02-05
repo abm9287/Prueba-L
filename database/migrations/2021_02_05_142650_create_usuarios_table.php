@@ -21,7 +21,7 @@ class CreateUsuariosTable extends Migration
             $table->string('telefono');
             $table->integer('edad');
             $table->date('fechaNacimiento');
-            $table->foreign('configuracio_id')->references('id')->on('configuracion')->onDelete('cascade')->onDelete('cascade');
+            
         });
     }
 
